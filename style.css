@@ -3,33 +3,35 @@ body {
     padding: 0;
     font-family: 'Nunito', sans-serif;
     color: white;
-    font-size:1em;
+    font-size: 1em;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+
+
 }
 
-.container {
+main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 25vh 25vh 25vh 25vh;
 }
 
 
-div {
-    display: flex;
-    background-color: black;
-    align-items: center;
-    justify-content: center;
+li {
+    list-style: none;
 }
 
-nav {
+div {
     display: flex;
-    background-color: black;
+    align-items: center;
+    justify-content: center;
 }
 
 a {
     text-decoration: none;
     color: white;
     transition: background 1s linear
-
 }
 
 a:hover {
@@ -38,8 +40,12 @@ a:hover {
 
 }
 
-nav a{
-    font-size: 2em;
+nav a {
+    font-size: 1.5em;
+}
+
+h1 {
+    padding-left: 1em;
 }
 
 #item1 {}
@@ -50,10 +56,9 @@ nav a{
 
 #item4 {
 
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding-top: 1em;
-    padding-right: 1em;
+    position: absolute;
+    right: 5vw;
+    top: 5vh;
 }
 
 #item5 {}
@@ -66,10 +71,8 @@ nav a{
 
 #item9 {
 
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    position: absolute;
+    bottom: 5vh;
 }
 
 #item10 {}
@@ -78,19 +81,54 @@ nav a{
 
 #item12 {
 
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-right: 1em;
-    padding-bottom: 1em;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
 }
 
 #video {
+
     width: 100%;
     height: 100%;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: span 2;
-    background-color: black;
+
+}
+
+
+
+/*heb de width gepakt van iPhone 8 en nieuwer*/
+
+@media (max-device-width: 23.4em) {
+
+
+    nav a {
+        font-size: 1.2em;
+    }
+
+    #item12 {
+        top: 5%;
+        right: 6%;
+    }
+
+    #item4 {
+        top: 5%;
+        left: 53%;
+    }
+
+    #item9 {
+        top: 5%;
+        left: 35%;
+    }
+
+    h1 {
+        padding-left: 0.5em;
+    }
+
+    #video {
+        visibility: hidden
+    }
 
 }
