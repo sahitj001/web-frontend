@@ -1,42 +1,80 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <main class="container">
+    <main>
 
-        <header id="item1">
-            <h1>Jordy</h1>
+        <!--item 1-->
+        <section class="container">
+            <header id="item1">
+                <p class="logo">PORTFOLIO</p>
+                <div class="logo2-hidden"></div>
+                <p class="logo3-hidden"> JORDY SAHIT </p>
+
+            </header>
+
+            <!--item2-->
             <nav>
                 <ul>
-                    <li id="item4"><a href="portfolio.html"> Portfolio</a></li>
+                    <li id="item4"> <a href="portfolio.html"> Works</a></li>
                     <li id="item9"> <a href="about.html"> About</a></li>
-                    <li id="item12"> <a href="contact.html"> Contact</a> </li>
+                    <li><button type="submit" class="item12"> Contact</button></li>
                 </ul>
             </nav>
-        </header>
 
-        <div id="item2"> 2</div>
-        <div id="item3"> 3</div>
-        <div>4</div>
-        <div id="item5"> 5</div>
-        <div id="item6"> 6</div>
-        <div id="item7"> 7</div>
-        <div id="item8"> 8</div>
-        <div>9</div>
-        <div id="item10"> 10</div>
-        <div id="item11"> 11</div>
-        <div>12</div>
-        <video id="video" src="video.mp4" type="video/mp4" autoplay muted loop></video>
+
+            <!--
+            <image src="img/foto.jpg" id="item2"></image>
+            <image src="img/foto.jpg" id="item3"></image>
+            <div>4</div>
+            <image src="img/foto.jpg" id="item5"></image>
+            <image src="img/foto.jpg" id="item6"></image>
+            <image src="img/foto.jpg" id="item7"></image>
+            <image src="img/foto.jpg" id="item8"></image>
+            <div>13</div>
+            <image src="img/foto.jpg" id="item10"></image>
+            <image src="img/foto.jpg" id="item11"></image>
+            <div>16</div>
+-->
+
+            <div class="contact-bg-hidden"></div>
+
+            <div class="contact-hidden">
+
+                <div class="contactContainer-hidden">
+
+                    <h1 class="contactHeader-hidden">CONTACT ME</h1>
+                    <section class="info-hidden">
+                        <image src="img/mail.png"></image>
+                        <image src="img/github.png"></image>
+                    </section>
+
+                    <section class="details-show">
+                        <p>jordy.sahit@live.nl</p>
+                        <p>github.com/sahitj001</p>
+                    </section>
+                    <button type="submit" class="closeContact-hidden">close</button>
+
+                </div>
+
+            </div>
+
+
+
+            <video id="video" src="video.mp4" type="video/mp4" autoplay muted loop></video>
+        </section>
 
 
     </main>
-
+    <script src="main.js"></script>
 </body></html>

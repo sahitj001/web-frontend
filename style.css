@@ -11,10 +11,118 @@ body {
 
 }
 
-main {
+/*portfolio tekst*/
+
+.logo {
+    margin: 0;
+   
+    font-family: "Impact";
+    src: url(impact.ttf);
+    font-size: 5em;
+
+    letter-spacing: 4px;
+    font-style: italic;
+    text-shadow: 0px 0px #E52529;
+    transition: .5s ease-in-out;
+    padding-left: 0.5%;
+    cursor: default;
+
+}
+
+
+.logo:hover {
+    text-shadow: 5px 5px #E52529;
+    transition: .2s ease-in-out;
+    cursor: default;
+
+}
+
+
+/*streep*/
+
+.logo2-hidden {
+    position: absolute;
+    width: 0;
+    height: 1em;
+    top: 12%;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    left: 0.5%;
+    cursor: default;
+}
+
+
+.logo2 {
+    visibility: visible;
+    position: absolute;
+    width: 14em;
+    height: 1.2em;
+    background-color: #E52529;
+    top: 12%;
+    left: 0.5%;
+    transform: skewX(-20deg);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    transition: width 0.8s ease-in-out;
+    cursor: default;
+}
+
+
+/*naam*/
+
+.logo3-hidden {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    cursor: default;
+    transition: 1s ease-in-out;
+    top: 10%;
+    left: 15.5%;
+    font-family: "Impact";
+    src: url(impact.ttf);
+    font-size: 1em;
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+
+.logo3 {
+    visibility: visible;
+    position: absolute;
+    top: 10%;
+    font-family: "Impact";
+    src: url(impact.ttf);
+    font-size: 1em;
+    letter-spacing: 3px;
+    font-style: italic;
+    left: 15.5%;
+    opacity: 1;
+    transition: opacity 1.8s ease-in;
+    cursor: default;
+}
+
+
+button {
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    font-size: 1.5em;
+    transition: background 1s linear
+}
+
+
+button:hover {
+
+    background-color: darkgrey;
+    transition: background 1s linear
+}
+
+
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 25vh 25vh 25vh 25vh;
+
 }
 
 
@@ -22,11 +130,13 @@ li {
     list-style: none;
 }
 
+
 div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 a {
     text-decoration: none;
@@ -36,7 +146,7 @@ a {
 
 a:hover {
     background-color: darkgray;
-    transition: background 500ms ease-in-out;
+    transition: background 0.5s ease-in-out;
 
 }
 
@@ -44,11 +154,16 @@ nav a {
     font-size: 1.5em;
 }
 
+
+
 h1 {
     padding-left: 1em;
 }
 
-#item1 {}
+#item1 {
+    width: 100%;
+    height:100%;
+}
 
 #item2 {}
 
@@ -59,6 +174,7 @@ h1 {
     position: absolute;
     right: 5vw;
     top: 5vh;
+
 }
 
 #item5 {}
@@ -72,18 +188,23 @@ h1 {
 #item9 {
 
     position: absolute;
-    bottom: 5vh;
+    bottom:5vh;
+    left: 5vw;
 }
 
 #item10 {}
 
 #item11 {}
 
-#item12 {
-
-    position: fixed;
-    bottom: 5vh;
-    right: 5vw;
+.item12 {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-decoration: none;
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
 
 #video {
@@ -93,22 +214,175 @@ h1 {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
-    grid-row-end: span 2;
+    grid-row-end: 4;
 
 }
 
+main img {
+    width: 100%;
+    height: 100%;
+}
 
+/*contact page*/
+
+.close-hidden {
+    visibility: hidden;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.close-show {
+    visibility: visible;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transition: opacity .6s;
+
+}
+
+.contact-bg-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.contact-bg-show {
+
+    visibility: visible;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+    background-color: darkslategrey;
+    transition: opacity .6s;
+
+}
+
+.contact-hidden {
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+.contact-show {
+    visibility: visible;
+    z-index: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: white;
+    transition: opacity .6s;
+    transform: skewY(-20deg);
+    transform: skewX(-20deg);
+    box-shadow: 15px 15px #E52529;
+}
+
+.contactHeader-hidden{
+    visibility: none;
+    transition: opacity .6s;
+}
+
+.contactHeader-show{
+    visibility: visible;
+    display: flex;
+    align-items: flex-start;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    letter-spacing: 1em;
+    color:black;
+    font-family: "Impact";
+    src: url(impact.ttf);
+
+}
+
+.contactContainer-hidden{
+    display: none;
+    transition: opacity .6s;
+}
+
+.contactContainer-show{
+    visibility: visible;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height:100%;
+
+}
+
+.info-hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .6s;
+
+}
+
+.info-show{
+    visibility: visible;
+    opacity: 1;
+    grid-column: 2;
+    grid-row-start: 2;
+    width: 30%;
+    height: 50%;
+    transition: opacity .6s;
+
+}
+
+.closeContact-hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.closeContact-show{
+    visibility: visible;
+    grid-column: 5;
+    grid-row-start: 1;
+    width: 3em;
+    height: 3em;
+    opacity: 1;
+    transition: opacity .6s;
+}
+
+.details-hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.details-show{
+    visibility: visible;
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    letter-spacing: 0.1em;
+    color:black;
+    font-family: "Impact";
+    src: url(impact.ttf);
+    width: 100%;
+    height: 100%;
+
+}
 
 /*heb de width gepakt van iPhone 8 en nieuwer*/
 
-@media (max-device-width: 23.4em) {
+@media (max-width: 23.4em) {
 
 
     nav a {
         font-size: 1.2em;
     }
 
-    #item12 {
+    .item12 {
         top: 5%;
         right: 6%;
     }
@@ -128,7 +402,12 @@ h1 {
     }
 
     #video {
-        visibility: hidden
+        width: 100%;
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
 
 }
